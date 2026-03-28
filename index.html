@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Veiled Archive | The Hub</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,200..800&family=Space+Grotesk:wght@300..700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ffb4ab",
+              "surface": "#131314",
+              "inverse-primary": "#603de0",
+              "surface-dim": "#131314",
+              "on-tertiary-fixed-variant": "#004f51",
+              "outline": "#978d9d",
+              "on-secondary-fixed-variant": "#404752",
+              "outline-variant": "#4c4451",
+              "secondary-container": "#404752",
+              "primary-fixed-dim": "#cabeff",
+              "on-secondary": "#2a313b",
+              "on-primary-container": "#9c88ff",
+              "error-container": "#93000a",
+              "secondary-fixed-dim": "#c0c7d4",
+              "on-primary": "#30009b",
+              "on-surface": "#e5e2e3",
+              "on-tertiary-fixed": "#002020",
+              "tertiary": "#2ddbde",
+              "background": "#131314",
+              "on-error-container": "#ffdad6",
+              "on-secondary-container": "#afb5c2",
+              "tertiary-fixed-dim": "#2ddbde",
+              "primary-container": "#31009d",
+              "on-surface-variant": "#cec3d3",
+              "on-primary-fixed-variant": "#4719c9",
+              "surface-container-low": "#1c1b1c",
+              "surface-container-lowest": "#0e0e0f",
+              "surface-container-high": "#2a2a2b",
+              "primary": "#cabeff",
+              "surface-container": "#201f20",
+              "inverse-surface": "#e5e2e3",
+              "surface-tint": "#cabeff",
+              "surface-variant": "#353436",
+              "inverse-on-surface": "#313031",
+              "tertiary-container": "#003839",
+              "primary-fixed": "#e6deff",
+              "secondary": "#c0c7d4",
+              "secondary-fixed": "#dce3f0",
+              "surface-container-highest": "#353436",
+              "on-error": "#690005",
+              "tertiary-fixed": "#5af8fb",
+              "on-tertiary-container": "#00abad",
+              "on-tertiary": "#003738",
+              "on-secondary-fixed": "#151c25",
+              "on-primary-fixed": "#1c0062",
+              "surface-bright": "#3a393a",
+              "on-background": "#e5e2e3"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Space Grotesk"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+          background-color: #131314;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          background-repeat: repeat;
+          background-size: 150px 150px;
+          background-blend-mode: overlay;
+          opacity: 0.97;
+      }
+      .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+          background: rgba(49, 0, 157, 0.05);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #131314; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #353436; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #cabeff; 
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-on-surface font-body selection:bg-tertiary selection:text-on-tertiary antialiased overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
