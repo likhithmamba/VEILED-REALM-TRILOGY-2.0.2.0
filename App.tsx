@@ -71,8 +71,9 @@ export default function App() {
                 A story of rebellion, of love sharpened into a weapon, and of worlds rebuilt by choice instead of destiny. The archive is now open.
               </p>
               <div className="flex flex-wrap gap-6">
-                <button onClick={() => scrollTo('vault')} className="px-8 py-4 bg-gradient-to-r from-[#cabeff] to-[#9c88ff] text-[#1c0062] font-bold font-label tracking-widest uppercase text-xs hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(202,190,255,0.2)] flex items-center gap-3">
-                  <Database size={16} /> Access Starter Pack
+                <button onClick={() => scrollTo('vault')} className="relative overflow-hidden group px-8 py-4 bg-gradient-to-r from-[#cabeff] to-[#9c88ff] text-[#1c0062] font-bold font-label tracking-widest uppercase text-xs hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(202,190,255,0.2)] flex items-center gap-3">
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
+                  <Database size={16} className="relative z-10" /> <span className="relative z-10">Access Starter Pack</span>
                 </button>
                 <button onClick={() => scrollTo('catalog')} className="px-8 py-4 border border-[#4c4451] hover:bg-[#2a2a2b] transition-colors font-bold font-label tracking-widest uppercase text-xs flex items-center gap-3">
                   <BookOpen size={16} /> View Catalog
@@ -263,8 +264,9 @@ export default function App() {
                     {STARTER_PACK.description}
                   </p>
                 </div>
-                <button onClick={() => setShowStarterPack(true)} className="relative z-10 self-start px-8 py-4 bg-[#e5e2e3] text-[#131314] font-bold font-label tracking-widest uppercase text-xs hover:bg-[#cabeff] transition-colors flex items-center gap-3">
-                  <Download size={16} /> Access Files
+                <button onClick={() => setShowStarterPack(true)} className="relative z-10 self-start overflow-hidden group px-8 py-4 bg-[#e5e2e3] text-[#131314] font-bold font-label tracking-widest uppercase text-xs hover:bg-[#cabeff] transition-colors flex items-center gap-3">
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
+                  <Download size={16} className="relative z-10" /> <span className="relative z-10">Access Files</span>
                 </button>
               </div>
               
@@ -310,8 +312,9 @@ export default function App() {
                   className="flex-1 bg-[#131314] border border-[#4c4451] px-6 py-4 text-[#e5e2e3] font-body focus:outline-none focus:border-[#cabeff] transition-colors placeholder:text-[#4c4451]"
                   required
                 />
-                <button type="submit" className="px-8 py-4 bg-[#cabeff] text-[#1c0062] font-bold font-label tracking-widest uppercase text-xs hover:bg-[#e6deff] transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
-                  <Mail size={16} /> Subscribe
+                <button type="submit" className="relative overflow-hidden group px-8 py-4 bg-[#cabeff] text-[#1c0062] font-bold font-label tracking-widest uppercase text-xs hover:bg-[#e6deff] transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
+                  <Mail size={16} className="relative z-10" /> <span className="relative z-10">Subscribe</span>
                 </button>
               </form>
               <p className="font-label text-[10px] text-[#978d9d] mt-4 uppercase tracking-widest">
